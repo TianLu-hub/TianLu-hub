@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
   <title id="title">TianLu-hub — night in the study</title>
-  <desc id="desc">A quiet night study overlooking New York. Partly cloudy, 12 degrees Celsius. A cat rests on the window sill beside books, a lamp, and warm coffee. Weather observed Oct 28, 19:30 EDT.</desc>
+  <desc id="desc">A quiet night study overlooking New York. Mostly clear, 12 degrees Celsius. A cat rests on the window sill beside books, a lamp, and warm coffee. Weather observed Oct 28, 19:45 EDT.</desc>
   <defs>
     <linearGradient id="room" x2="1" y2="1"><stop stop-color="#152337"/><stop offset="1" stop-color="#1D3047"/></linearGradient>
     <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#203B56"/><stop offset="1" stop-color="#29445C"/></linearGradient>
@@ -49,7 +49,7 @@
   <rect x="592" y="25" width="258" height="184" rx="7" fill="#50647A"/>
   <rect x="598" y="31" width="246" height="170" rx="5" fill="url(#glass)"/>
   <g clip-path="url(#window-clip)">
-    <path d="M803 51a14 14 0 1 0 6 23 14 14 0 0 1-6-23Z" fill="#E0DECF" opacity=".28"/>
+    <path d="M803 51a14 14 0 1 0 6 23 14 14 0 0 1-6-23Z" fill="#E0DECF" opacity=".85"/>
     <path d="M590 155H611V125H635V144H650V109H676V130H695V151H711V118H733V137H749V103H768V129H787V146H807V119H826V140H856V207H590Z" fill="#1B3249"/>
     <path d="M590 172H624V151H648V166H663V142H689V169H711V155H740V178H755V149H781V170H799V157H826V174H856V207H590Z" fill="#12273D"/>
     <g fill="#E9B76F" class="city-lights" opacity=".7">
@@ -58,7 +58,7 @@
     <g fill="#CFDCCF" class="city-lights city-lights-b" opacity=".7">
       <rect x="617" y="135" width="3" height="4" rx=".5"/><rect x="728" y="144" width="3" height="4" rx=".5"/><rect x="762" y="124" width="3" height="4" rx=".5"/><rect x="674" y="154" width="3" height="4" rx=".5"/><rect x="719" y="165" width="3" height="4" rx=".5"/><rect x="807" y="170" width="3" height="4" rx=".5"/>
     </g>
-    <g class="clouds" fill="#71859B" opacity=".64"><path d="M609 80q-5-10 8-13 4-17 22-11 13-8 21 5 17-2 18 12 13 0 13 10h-82Z"/><path d="M750 95q-4-9 8-11 4-13 18-10 10-7 19 5 14-2 17 10 11 0 12 9h-74Z"/></g>
+
     <path d="M605 35H697L605 127Z" fill="#B0CDDF" opacity=".025"/>
   </g>
   <path d="M720 31V201" stroke="#50647A" stroke-width="5"/>
@@ -86,8 +86,8 @@
   <text x="51" y="119" fill="#F4ECDE" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="48" letter-spacing="-1.8">TianLu-hub</text>
   <text x="54" y="151" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" letter-spacing="1">build · explore · repeat</text>
   <path d="M54 174H89" stroke="#E9B76F" stroke-width="2" stroke-linecap="round"/>
-  <text x="54" y="199" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12.5" letter-spacing=".1">New York · 12°C · Partly cloudy</text>
-  <text x="54" y="211" fill="#9BAEC1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" letter-spacing=".3">Weather data · Oct 28, 19:30 EDT</text>
+  <text x="54" y="199" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12.5" letter-spacing=".1">New York · 12°C · Mostly clear</text>
+  <text x="54" y="211" fill="#9BAEC1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" letter-spacing=".3">Weather data · Oct 28, 19:45 EDT</text>
 
   <!-- A single continuous desk joins the typography and the illustration. -->
   <rect x="45" y="251" width="810" height="8" rx="4" fill="url(#wood)"/>

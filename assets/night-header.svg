@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
-  <title id="title">TianLu-hub — a quiet night at the desk</title>
-  <desc id="desc">An amber reading lamp lights a notebook and a steaming cup beside a rainy city window. Rain slides down the glass, distant windows glow softly, and coffee steam curls upward.</desc>
+  <title id="title">TianLu-hub — night in the study</title>
+  <desc id="desc">A quiet night study overlooking New York. Partly cloudy, 12 degrees Celsius. A cat rests on the window sill beside books, a lamp, and warm coffee. Weather observed Oct 28, 19:30 EDT.</desc>
   <defs>
     <linearGradient id="room" x2="1" y2="1"><stop stop-color="#152337"/><stop offset="1" stop-color="#1D3047"/></linearGradient>
     <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#203B56"/><stop offset="1" stop-color="#29445C"/></linearGradient>
@@ -9,6 +9,22 @@
     <radialGradient id="halo"><stop stop-color="#E9B76F" stop-opacity=".12"/><stop offset="1" stop-color="#E9B76F" stop-opacity="0"/></radialGradient>
     <clipPath id="window-clip"><rect x="598" y="31" width="246" height="170" rx="5"/></clipPath>
     <style>
+
+      .snow{fill:#F1F3EF;animation:snow-fall 13s linear infinite}
+      .snow-b{animation-duration:17s;animation-delay:-7s;opacity:.55}
+      .clouds{animation:cloud-drift 28s ease-in-out infinite}
+      .mist{animation:mist-drift 22s ease-in-out infinite}
+      .cat-tail{transform-box:view-box;transform-origin:685px 207px;animation:tail-sway 11s ease-in-out infinite}
+      .cat-head{transform-box:view-box;transform-origin:661px 203px;animation:cat-nod 18s ease-in-out infinite}
+      .cat-eyes{transform-box:fill-box;transform-origin:center;animation:cat-blink 8.7s linear infinite}
+      @keyframes snow-fall{from{transform:translate(-4px,-65px)}to{transform:translate(7px,75px)}}
+      @keyframes cloud-drift{0%,100%{transform:translateX(-3px)}50%{transform:translateX(4px)}}
+      @keyframes mist-drift{0%,100%{transform:translateX(-5px);opacity:.35}50%{transform:translateX(5px);opacity:.52}}
+      @keyframes tail-sway{0%,76%,100%{transform:rotate(0deg)}84%{transform:rotate(-7deg)}92%{transform:rotate(3deg)}}
+      @keyframes cat-nod{0%,82%,100%{transform:rotate(0deg)}89%,94%{transform:rotate(-3deg)}}
+      @keyframes cat-blink{0%,91%,95%,100%{transform:scaleY(1)}93%{transform:scaleY(.08)}}
+
+
       .rain{animation:rain-fall 6.5s linear infinite;transform-box:view-box;stroke:#A9C4D8;stroke-width:1;stroke-linecap:round;opacity:.25}
       .rain-b{animation-duration:7.7s;animation-delay:-3.5s;opacity:.16}
       .rain-c{animation-duration:5.6s;animation-delay:-1.8s;opacity:.23}
@@ -25,7 +41,7 @@
     </style>
   </defs>
   <rect width="900" height="300" rx="16" fill="url(#room)"/>
-  <path d="M0 269H900" stroke="#7F96AF" stroke-opacity=".07"/>
+  <path d="M0 269H900" stroke="#9BAEC1" stroke-opacity=".07"/>
   <circle cx="650" cy="210" r="150" fill="url(#halo)" class="lamp-glow"/>
 
   <!-- A framed night view, with the movement contained inside the glass. -->
@@ -33,24 +49,36 @@
   <rect x="592" y="25" width="258" height="184" rx="7" fill="#50647A"/>
   <rect x="598" y="31" width="246" height="170" rx="5" fill="url(#glass)"/>
   <g clip-path="url(#window-clip)">
-    <circle cx="796" cy="65" r="14" fill="#E0DECF" opacity=".8"/>
-    <circle cx="802" cy="60" r="14" fill="#25425B"/>
+    <path d="M803 51a14 14 0 1 0 6 23 14 14 0 0 1-6-23Z" fill="#E0DECF" opacity=".28"/>
     <path d="M590 155H611V125H635V144H650V109H676V130H695V151H711V118H733V137H749V103H768V129H787V146H807V119H826V140H856V207H590Z" fill="#1B3249"/>
     <path d="M590 172H624V151H648V166H663V142H689V169H711V155H740V178H755V149H781V170H799V157H826V174H856V207H590Z" fill="#12273D"/>
-    <g fill="#E9B76F" class="city-lights">
+    <g fill="#E9B76F" class="city-lights" opacity=".7">
       <rect x="656" y="118" width="3" height="5" rx=".5"/><rect x="666" y="131" width="3" height="5" rx=".5"/><rect x="718" y="127" width="3" height="5" rx=".5"/><rect x="755" y="112" width="3" height="5" rx=".5"/><rect x="814" y="129" width="3" height="5" rx=".5"/><rect x="633" y="164" width="3" height="5" rx=".5"/><rect x="770" y="160" width="3" height="5" rx=".5"/>
     </g>
-    <g fill="#CFDCCF" class="city-lights city-lights-b">
+    <g fill="#CFDCCF" class="city-lights city-lights-b" opacity=".7">
       <rect x="617" y="135" width="3" height="4" rx=".5"/><rect x="728" y="144" width="3" height="4" rx=".5"/><rect x="762" y="124" width="3" height="4" rx=".5"/><rect x="674" y="154" width="3" height="4" rx=".5"/><rect x="719" y="165" width="3" height="4" rx=".5"/><rect x="807" y="170" width="3" height="4" rx=".5"/>
     </g>
-    <g class="rain"><path d="M614 9l-2 14m52 14-2 18m56-57-2 14m66 25-2 19m47-40-2 15M631 104l-2 16m62-23-2 20m46 30-2 15m66-63-2 17m34 26-2 15M612 203l-2 14m52 14-2 18m56-57-2 14m66 25-2 19m47-40-2 15"/></g>
-    <g class="rain rain-b"><path d="M641 5l-2 20m46 22-2 16m61-40-2 20m66 12-2 16M612 93l-2 20m46 22-2 16m61-40-2 20m66 12-2 16m43 27-2 18M641 195l-2 20m46 22-2 16m61-40-2 20m66 12-2 16"/></g>
-    <g class="rain rain-c"><path d="M622-29l-1 10m52 7-1 11m91-7-1 12m61-28-1 12M638 67l-1 10m52 7-1 11m70-28-1 12m61 1-1 12M622 168l-1 10m52 7-1 11m91-7-1 12m61-28-1 12"/></g>
+    <g class="clouds" fill="#71859B" opacity=".64"><path d="M609 80q-5-10 8-13 4-17 22-11 13-8 21 5 17-2 18 12 13 0 13 10h-82Z"/><path d="M750 95q-4-9 8-11 4-13 18-10 10-7 19 5 14-2 17 10 11 0 12 9h-74Z"/></g>
     <path d="M605 35H697L605 127Z" fill="#B0CDDF" opacity=".025"/>
   </g>
   <path d="M720 31V201" stroke="#50647A" stroke-width="5"/>
   <path d="M598 112H844" stroke="#50647A" stroke-width="4"/>
   <path d="M582 214H860" stroke="#677A8D" stroke-width="5" stroke-linecap="round"/>
+
+  <g id="window-cat" aria-label="A little cat resting on the window sill">
+    <path class="cat-tail" d="M683 207q9-5 4-18" fill="none" stroke="#826A5C" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="676" cy="204" rx="15" ry="8" fill="#BA9B82"/>
+    <path d="M670 199q3 4 1 9m7-11q3 4 1 8" fill="none" stroke="#826A5C" stroke-width="2" opacity=".45"/>
+    <g class="cat-head">
+      <path d="M651 195l1-12 8 7 7-7 4 13Z" fill="#BA9B82"/>
+      <path d="M654 191v-4l4 4m7 0 2-4 1 5" fill="none" stroke="#DCB3A3" stroke-width="2"/>
+      <ellipse cx="661" cy="198" rx="11" ry="9" fill="#BA9B82"/>
+      <g class="cat-eyes" fill="#332C2A"><ellipse cx="657" cy="198" rx="1.05" ry="1.25"/><ellipse cx="665" cy="198" rx="1.05" ry="1.25"/></g>
+      <path d="M660 202h2l-1 1Z" fill="#332C2A"/>
+      <path d="M653 201l-5-1m5 3-5 1m20-3 5-1m-5 3 5 1" stroke="#332C2A" stroke-width=".65" opacity=".5"/>
+    </g>
+    <path d="M659 210h10m7 0h9" stroke="#BA9B82" stroke-width="5" stroke-linecap="round"/>
+  </g>
 
   <!-- The quiet space is deliberately reserved for the identity. -->
   <circle cx="55" cy="55" r="3" fill="#E9B76F"/>
@@ -58,7 +86,8 @@
   <text x="51" y="119" fill="#F4ECDE" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="48" letter-spacing="-1.8">TianLu-hub</text>
   <text x="54" y="151" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" letter-spacing="1">build · explore · repeat</text>
   <path d="M54 174H89" stroke="#E9B76F" stroke-width="2" stroke-linecap="round"/>
-  <text x="54" y="200" fill="#7F96AF" font-family="Georgia,serif" font-style="italic" font-size="13">A few ideas. A warm light. Room to grow.</text>
+  <text x="54" y="199" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12.5" letter-spacing=".1">New York · 12°C · Partly cloudy</text>
+  <text x="54" y="211" fill="#9BAEC1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" letter-spacing=".3">Weather data · Oct 28, 19:30 EDT</text>
 
   <!-- A single continuous desk joins the typography and the illustration. -->
   <rect x="45" y="251" width="810" height="8" rx="4" fill="url(#wood)"/>
@@ -88,8 +117,7 @@
   <path d="M322 250l2-6 3 3Z" fill="#F4ECDE"/>
 
   <!-- A compact articulated lamp; its glow breathes very slowly. -->
-  <path d="M608 176l-53 74h128l-43-74Z" fill="url(#light)" class="lamp-glow"/>
-  <g class="lamp-glow"><ellipse cx="620" cy="247" rx="55" ry="4" fill="#E9B76F" opacity=".07"/></g>
+  <path d="M608 176l-53 74h128l-43-74Z" fill="url(#light)" class="lamp-glow"/><g class="lamp-glow"><ellipse cx="620" cy="247" rx="55" ry="4" fill="#E9B76F" opacity=".07"/></g>
   <path d="M585 244l-9-41 29-36" fill="none" stroke="#B29B7C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M585 244l-9-41 29-36" fill="none" stroke="#D6BC94" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="576" cy="203" r="5" fill="#7D807E"/>

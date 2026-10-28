@@ -1,0 +1,14 @@
+{
+  "city": "New York",
+  "timezone": "America/New_York",
+  "temperature_c": 12.4,
+  "weather": "cloud",
+  "weather_label": "Partly cloudy",
+  "weather_code": 2,
+  "phase": "night",
+  "observed_at": "2026-10-28T23:30:00+00:00",
+  "observed_label": "Oct 28, 19:30 EDT",
+  "sunrise": "2026-10-28T07:21:45-04:00",
+  "sunset": "2026-10-28T17:57:11-04:00",
+  "source": "https://open-meteo.com/"
+}

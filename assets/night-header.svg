@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
-  <title id="title">TianLu-hub — night in the study</title>
+  <title id="title">tianlu — night in the study</title>
   <desc id="desc">A quiet night study overlooking New York. Mostly clear, 12 degrees Celsius. A cat rests on the window sill beside books, a lamp, and warm coffee. Weather observed Oct 28, 19:45 EDT.</desc>
   <defs>
     <linearGradient id="room" x2="1" y2="1"><stop stop-color="#152337"/><stop offset="1" stop-color="#1D3047"/></linearGradient>
@@ -81,13 +81,7 @@
   </g>
 
   <!-- The quiet space is deliberately reserved for the identity. -->
-  <circle cx="55" cy="55" r="3" fill="#E9B76F"/>
-  <text x="68" y="59" fill="#A2B2C3" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="10" letter-spacing="2.1">A LITTLE CORNER OF THE INTERNET</text>
-  <text x="51" y="119" fill="#F4ECDE" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="48" letter-spacing="-1.8">TianLu-hub</text>
-  <text x="54" y="151" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" letter-spacing="1">build · explore · repeat</text>
-  <path d="M54 174H89" stroke="#E9B76F" stroke-width="2" stroke-linecap="round"/>
-  <text x="54" y="199" fill="#ADBCCB" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12.5" letter-spacing=".1">New York · 12°C · Mostly clear</text>
-  <text x="54" y="211" fill="#9BAEC1" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" letter-spacing=".3">Weather data · Oct 28, 19:45 EDT</text>
+  <text x="54" y="145" fill="#F4ECDE" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="56" letter-spacing="-1.8">tianlu</text>
 
   <!-- A single continuous desk joins the typography and the illustration. -->
   <rect x="45" y="251" width="810" height="8" rx="4" fill="url(#wood)"/>

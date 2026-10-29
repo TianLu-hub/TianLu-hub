@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/night-header.svg" width="900" alt="TianLu-hub — a New York study that follows the weather and daylight" />
+  <img src="assets/night-header.svg" width="900" alt="tianlu — a New York study that follows the weather and daylight" />
   <br/>
   <img src="assets/night-chip-python.svg" alt="Python" /> <img src="assets/night-chip-typescript.svg" alt="TypeScript" /> <img src="assets/night-chip-java.svg" alt="Java" /> <img src="assets/night-chip-react.svg" alt="React" /> <img src="assets/night-chip-ml.svg" alt="Machine Learning" />
 </div>

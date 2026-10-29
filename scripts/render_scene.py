@@ -117,9 +117,7 @@ def _context(scene):
     city = str(scene.get("city", "New York"))
     weather_label = str(scene.get("weather_label", weather.title()))
     observed = str(scene.get("observed_label", ""))
-    values["WEATHER_LINE"] = escape("%s · %d°C · %s" % (city, round(temperature), weather_label))
-    values["UPDATED_LINE"] = escape("Weather data · " + observed) if observed else ""
-    values["TITLE"] = escape("TianLu-hub — %s in the study" % phase)
+    values["TITLE"] = escape("tianlu — %s in the study" % phase)
     values["DESCRIPTION"] = escape(
         "A quiet %s study overlooking %s. %s, %.0f degrees Celsius. "
         "A cat rests on the window sill beside books, a lamp, and warm coffee. "
@@ -235,13 +233,7 @@ _HEADER = r"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" v
   @CAT@
 
   <!-- The quiet space is deliberately reserved for the identity. -->
-  <circle cx="55" cy="55" r="3" fill="#E9B76F"/>
-  <text x="68" y="59" fill="@MUTED@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="10" letter-spacing="2.1">A LITTLE CORNER OF THE INTERNET</text>
-  <text x="51" y="119" fill="@INK@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="48" letter-spacing="-1.8">TianLu-hub</text>
-  <text x="54" y="151" fill="@SECONDARY@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="16" letter-spacing="1">build · explore · repeat</text>
-  <path d="M54 174H89" stroke="#E9B76F" stroke-width="2" stroke-linecap="round"/>
-  <text x="54" y="199" fill="@SECONDARY@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="12.5" letter-spacing=".1">@WEATHER_LINE@</text>
-  <text x="54" y="211" fill="@SMALL@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="8.5" letter-spacing=".3">@UPDATED_LINE@</text>
+  <text x="54" y="145" fill="@INK@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="56" letter-spacing="-1.8">tianlu</text>
 
   <!-- A single continuous desk joins the typography and the illustration. -->
   <rect x="45" y="251" width="810" height="8" rx="4" fill="url(#wood)"/>

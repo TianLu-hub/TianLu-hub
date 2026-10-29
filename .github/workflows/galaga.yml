@@ -1,0 +1,92 @@
+name: Update contribution Galaga
+
+on:
+  schedule:
+    - cron: '29 9 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/galaga.yml'
+      - 'scripts/generate_galaga.mjs'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contribution-galaga
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    if: github.repository == 'TianLu-hub/TianLu-hub'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Download pinned arcade renderer
+        run: >-
+          curl --fail --silent --show-error --retry 3 --max-time 60
+          https://raw.githubusercontent.com/abozanona/pacman-contribution-graph/7332e1de7903ab780c3692a4127a59cc13872daa/dist/pacman-contribution-graph.min.js
+          -o "$RUNNER_TEMP/arcade.mjs"
+      - name: Generate from the real GitHub contribution calendar
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TZ: UTC
+        run: node scripts/generate_galaga.mjs "$RUNNER_TEMP/arcade.mjs" dist
+      - name: Validate SVG document
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          root = ET.parse('dist/galaga.svg').getroot()
+          assert root.tag == '{http://www.w3.org/2000/svg}svg'
+          assert Path('dist/galaga-state.json').is_file()
+          print('Generated SVG is valid XML.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: contribution-galaga
+          path: |
+            dist/galaga.svg
+            dist/galaga-state.json
+          if-no-files-found: error
+          retention-days: 3
+
+  publish:
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          name: contribution-galaga
+          path: ${{ runner.temp }}/contribution-galaga
+      - name: Publish only the generated animation on its own branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin galaga > /dev/null; then
+            git fetch origin galaga
+            git checkout -B galaga FETCH_HEAD
+          else
+            git checkout --orphan galaga
+            git rm -rf .
+          fi
+          cp "$RUNNER_TEMP/contribution-galaga/galaga.svg" galaga.svg
+          cp "$RUNNER_TEMP/contribution-galaga/galaga-state.json" galaga-state.json
+          git add galaga.svg galaga-state.json
+          if git diff --cached --quiet; then
+            echo 'Animation already up to date.'
+            exit 0
+          fi
+          git commit -m 'Refresh contribution Galaga'
+          git push origin HEAD:galaga

@@ -28,12 +28,19 @@ Month labels appear above the calendar, with Mon/Wed/Fri row markers on the left
 and the actual contribution date range below. Each column is one Sunday-starting
 week. These labels are regenerated with the calendar each day.
 
-## Interactive daily calendar
+## Daily counts directly on the profile
 
-The profile links to an interactive calendar hosted by this repository on GitHub
-Pages. Its month view labels every day; hovering, keyboard focus, or tapping a day
-shows its full date, public commits, and total contributions. A year view is also
-available. The page and its data refresh with the same daily workflow.
+The profile embeds a readable current-month calendar. Each cell shows its date
+at the top left and its public commit count at the bottom right. Previous months
+expand inside the profile using native GitHub details sections. The month labels,
+calendar cells, and counts refresh daily; no navigation is needed to read them.
+Zero means a verified day with no public commits, while a dash means unavailable
+data or a date after the latest data snapshot.
+
+The 25 static SVGs in `calendar/` use fixed filenames on the `galaga` branch. This
+keeps the month labels current without another bot editing the README on `main`.
+Images are wrapped in `picture` elements to prevent GitHub from automatically
+turning them into links to separate SVG pages.
 
 Commit counts come from GitHub's `CreatedCommitContribution.commitCount`, summed
 across public repositories for each date. These are commits recognized by GitHub's
@@ -43,5 +50,6 @@ other activity. Dates use GitHub's UTC contribution buckets. Private repository
 commit details are excluded. Incomplete API results stop publication rather than
 silently becoming zeroes.
 
-The README embeds an image, so individual cells cannot receive hover interactions
-there. Clicking the animation or its caption opens the interactive calendar.
+README images do not support per-cell hover interactions; the date and count are
+always visible instead. The existing GitHub Pages calendar remains available,
+but the profile's calendar and Galaga image no longer link out to it.

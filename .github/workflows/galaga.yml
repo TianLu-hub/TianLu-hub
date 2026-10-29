@@ -10,7 +10,9 @@ on:
       - '.github/workflows/galaga.yml'
       - 'scripts/generate_galaga.mjs'
       - 'scripts/calendar_data.mjs'
+      - 'scripts/render_calendar.mjs'
       - 'tests/calendar_data.test.mjs'
+      - 'tests/render_calendar.test.mjs'
       - 'site/**'
 
 permissions:
@@ -43,6 +45,7 @@ jobs:
       - name: Prepare interactive calendar
         run: |
           node --test tests/calendar_data.test.mjs
+          node --test tests/render_calendar.test.mjs
           node --check site/calendar.js
           cp site/* dist/
       - name: Validate SVG document
@@ -53,6 +56,10 @@ jobs:
           root = ET.parse('dist/galaga.svg').getroot()
           assert root.tag == '{http://www.w3.org/2000/svg}svg'
           assert Path('dist/galaga-state.json').is_file()
+          calendars = list(Path('dist/calendar').glob('*.svg'))
+          assert len(calendars) == 25
+          for path in calendars:
+              assert ET.parse(path).getroot().tag == '{http://www.w3.org/2000/svg}svg'
           print('Generated SVG is valid XML.')
           PY
       - uses: actions/upload-artifact@v4
@@ -62,6 +69,7 @@ jobs:
             dist/galaga.svg
             dist/galaga-state.json
             dist/calendar-data.json
+            dist/calendar/
           if-no-files-found: error
           retention-days: 3
       - uses: actions/upload-pages-artifact@v4
@@ -113,7 +121,9 @@ jobs:
           cp "$RUNNER_TEMP/contribution-galaga/galaga.svg" galaga.svg
           cp "$RUNNER_TEMP/contribution-galaga/galaga-state.json" galaga-state.json
           cp "$RUNNER_TEMP/contribution-galaga/calendar-data.json" calendar-data.json
-          git add galaga.svg galaga-state.json calendar-data.json
+          mkdir -p calendar
+          cp "$RUNNER_TEMP/contribution-galaga/calendar/"*.svg calendar/
+          git add galaga.svg galaga-state.json calendar-data.json calendar
           if git diff --cached --quiet; then
             echo 'Animation already up to date.'
             exit 0

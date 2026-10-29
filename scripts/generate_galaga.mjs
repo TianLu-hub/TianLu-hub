@@ -5,6 +5,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { fetchCalendarData } from './calendar_data.mjs';
+import { renderMonthlyCalendars } from './render_calendar.mjs';
 
 const username = 'TianLu-hub';
 const upstreamCommit = '7332e1de7903ab780c3692a4127a59cc13872daa';
@@ -104,9 +105,14 @@ const metadata = {
   svg_sha256: createHash('sha256').update(svg).digest('hex'),
 };
 const calendarData = await fetchCalendarData({ username, token, days });
+const monthlyCalendars = renderMonthlyCalendars(calendarData);
 
 await mkdir(outputPath, { recursive: true });
 await writeFile(resolve(outputPath, 'galaga.svg'), svg);
 await writeFile(resolve(outputPath, 'galaga-state.json'), JSON.stringify(metadata, null, 2) + '\n');
 await writeFile(resolve(outputPath, 'calendar-data.json'), JSON.stringify(calendarData, null, 2) + '\n');
+await mkdir(resolve(outputPath, 'calendar'), { recursive: true });
+for (const [filename, document] of monthlyCalendars) {
+  await writeFile(resolve(outputPath, 'calendar', filename), document);
+}
 console.log(`Rendered ${username}: ${total} contributions, ${activeDays} active days (${metadata.from}–${metadata.to}).`);

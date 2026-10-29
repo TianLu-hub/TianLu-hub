@@ -21,3 +21,6 @@ date range, contribution total, active days and hashes for provenance. The rende
 job only has read permission; a separate publishing job writes the generated files.
 
 The README plays the animation automatically. It is not a keyboard-controlled game.
+Empty and cleared calendar cells stay muted gray so the year-long grid remains
+visible. Green cells still reflect the real contribution levels, and the ship's
+movement and firing animation are unchanged.

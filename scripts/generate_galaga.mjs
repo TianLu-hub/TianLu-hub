@@ -52,6 +52,18 @@ if (/<script\b|<foreignObject\b|\son[a-z]+\s*=|(?:href|src)\s*=\s*["'](?:https?:
   throw new Error('Unexpected active or external SVG content.');
 }
 
+// Keep the calendar visible when cells are empty or have been cleared by the ship.
+// Only recolor the pinned renderer's calendar cells, leaving sprites and timing intact.
+const emptyCellColor = '#3b424c';
+let calendarCells = 0;
+svg = svg.replace(/<rect x="[^"]+" y="[^"]+" width="20" height="20" rx="3" fill="transparent">[\s\S]*?<\/rect>/g, cell => {
+  calendarCells += 1;
+  return cell.replaceAll('transparent', emptyCellColor);
+});
+if (calendarCells !== 53 * 7) {
+  throw new Error('Unexpected Galaga calendar layout; refusing to publish incomplete styling.');
+}
+
 const total = days.reduce((sum, day) => sum + day.count, 0);
 const activeDays = days.filter(day => day.count > 0).length;
 const description = `Galaga generated from ${username}'s real GitHub contribution calendar: ${days[0].date} to ${days.at(-1).date}, ${total} contributions across ${activeDays} active days. Automatically played animation.`;
@@ -64,6 +76,7 @@ const metadata = {
   calendar_sha256: createHash('sha256').update(JSON.stringify(days)).digest('hex'),
   renderer: 'abozanona/pacman-contribution-graph', upstream_commit: upstreamCommit,
   renderer_sha256: expectedHash,
+  empty_cell_color: emptyCellColor,
   svg_sha256: createHash('sha256').update(svg).digest('hex'),
 };
 

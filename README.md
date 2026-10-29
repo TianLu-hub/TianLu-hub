@@ -23,6 +23,10 @@ Small experiments, visible results, and room for the next question.
 
 </details>
 
+<div align="center">
+  <a href="docs/galaga.md"><img src="https://raw.githubusercontent.com/TianLu-hub/TianLu-hub/galaga/galaga.svg" width="900" alt="Galaga animation from TianLu-hub's real GitHub contributions" /></a>
+</div>
+
 <sub>The window follows New York weather and sunrise/sunset, refreshed about every 30 minutes. Weather data: <a href="https://open-meteo.com/">Open-Meteo</a> · <a href="docs/living-study.md">About the study</a></sub>
 
 <div align="center">

@@ -1,4 +1,4 @@
-name: Update contribution Galaga
+name: Update contribution snake
 
 on:
   schedule:
@@ -8,18 +8,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/galaga.yml'
-      - 'scripts/generate_galaga.mjs'
-      - 'scripts/calendar_data.mjs'
-      - 'scripts/render_calendar.mjs'
-      - 'tests/calendar_data.test.mjs'
-      - 'tests/render_calendar.test.mjs'
-      - 'site/**'
 
 permissions:
   contents: read
 
 concurrency:
-  group: contribution-galaga
+  group: contribution-snake
   cancel-in-progress: false
 
 jobs:
@@ -28,70 +22,46 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Generate snake from TianLu-hub's real contributions
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
         with:
-          node-version: '24'
-      - name: Download pinned arcade renderer
-        run: >-
-          curl --fail --silent --show-error --retry 3 --max-time 60
-          https://raw.githubusercontent.com/abozanona/pacman-contribution-graph/7332e1de7903ab780c3692a4127a59cc13872daa/dist/pacman-contribution-graph.min.js
-          -o "$RUNNER_TEMP/arcade.mjs"
-      - name: Generate from the real GitHub contribution calendar
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          TZ: UTC
-        run: node scripts/generate_galaga.mjs "$RUNNER_TEMP/arcade.mjs" dist
-      - name: Prepare interactive calendar
-        run: |
-          node --test tests/calendar_data.test.mjs
-          node --test tests/render_calendar.test.mjs
-          node --check site/calendar.js
-          cp site/* dist/
-      - name: Validate SVG document
+          github_user_name: TianLu-hub
+          github_token: ${{ github.token }}
+          outputs: |
+            dist/snake.svg?palette=github-light&color_snake=%238b5cf6
+            dist/snake-dark.svg?palette=github-dark&color_snake=%23a78bfa&color_dots=%2330363d,%230e4429,%23006d32,%2326a641,%2339d353
+      - name: Validate both animated SVGs
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          from datetime import datetime, timezone
+          import json
           import xml.etree.ElementTree as ET
-          root = ET.parse('dist/galaga.svg').getroot()
-          assert root.tag == '{http://www.w3.org/2000/svg}svg'
-          assert Path('dist/galaga-state.json').is_file()
-          calendars = list(Path('dist/calendar').glob('*.svg'))
-          assert len(calendars) == 25
-          for path in calendars:
-              assert ET.parse(path).getroot().tag == '{http://www.w3.org/2000/svg}svg'
-          print('Generated SVG is valid XML.')
+          for name in ['snake.svg', 'snake-dark.svg']:
+              path = Path('dist') / name
+              data = path.read_text()
+              assert ET.fromstring(data).tag == '{http://www.w3.org/2000/svg}svg'
+              assert '@keyframes' in data and 'animation' in data
+              assert 0 < path.stat().st_size < 10 * 1024 * 1024
+              assert '<script' not in data and '<foreignObject' not in data
+          Path('dist/snake-state.json').write_text(json.dumps({
+              'username': 'TianLu-hub',
+              'source': 'https://api.github.com/graphql',
+              'renderer': 'Platane/snk',
+              'upstream_commit': 'd8f6715049803e982ee5ff501b6b9b7d5deeb09b',
+              'generated_at': datetime.now(timezone.utc).isoformat(),
+          }, indent=2) + '\n')
+          print('Both real-contribution snake SVGs are valid.')
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: contribution-galaga
+          name: contribution-snake
           path: |
-            dist/galaga.svg
-            dist/galaga-state.json
-            dist/calendar-data.json
-            dist/calendar/
+            dist/snake.svg
+            dist/snake-dark.svg
+            dist/snake-state.json
           if-no-files-found: error
           retention-days: 3
-      - uses: actions/upload-pages-artifact@v4
-        with:
-          path: dist
-
-  deploy-calendar:
-    needs: generate
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/configure-pages@v5
-      - name: Publish interactive contribution calendar
-        id: deployment
-        uses: actions/deploy-pages@v4
 
   publish:
     needs: generate
@@ -105,28 +75,26 @@ jobs:
           ref: main
       - uses: actions/download-artifact@v4
         with:
-          name: contribution-galaga
-          path: ${{ runner.temp }}/contribution-galaga
-      - name: Publish only the generated animation on its own branch
+          name: contribution-snake
+          path: ${{ runner.temp }}/contribution-snake
+      - name: Publish the snake on its own branch
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          if git ls-remote --exit-code --heads origin galaga > /dev/null; then
-            git fetch origin galaga
-            git checkout -B galaga FETCH_HEAD
+          if git ls-remote --exit-code --heads origin snake > /dev/null; then
+            git fetch origin snake
+            git checkout -B snake FETCH_HEAD
           else
-            git checkout --orphan galaga
+            git checkout --orphan snake
             git rm -rf .
           fi
-          cp "$RUNNER_TEMP/contribution-galaga/galaga.svg" galaga.svg
-          cp "$RUNNER_TEMP/contribution-galaga/galaga-state.json" galaga-state.json
-          cp "$RUNNER_TEMP/contribution-galaga/calendar-data.json" calendar-data.json
-          mkdir -p calendar
-          cp "$RUNNER_TEMP/contribution-galaga/calendar/"*.svg calendar/
-          git add galaga.svg galaga-state.json calendar-data.json calendar
+          cp "$RUNNER_TEMP/contribution-snake/snake.svg" snake.svg
+          cp "$RUNNER_TEMP/contribution-snake/snake-dark.svg" snake-dark.svg
+          cp "$RUNNER_TEMP/contribution-snake/snake-state.json" snake-state.json
+          git add snake.svg snake-dark.svg snake-state.json
           if git diff --cached --quiet; then
-            echo 'Animation already up to date.'
+            echo 'Snake animation already up to date.'
             exit 0
           fi
-          git commit -m 'Refresh contribution Galaga'
-          git push origin HEAD:galaga
+          git commit -m 'Refresh contribution snake'
+          git push origin HEAD:snake

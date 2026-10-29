@@ -1,5 +1,9 @@
 # Contribution Galaga
 
+> Retired: the profile now uses the [contribution snake](snake.md). The workflow
+> no longer generates Galaga or monthly calendars. Details below describe the
+> previous implementation.
+
 The animated SVG uses **TianLu-hub's actual GitHub contribution calendar**, fetched
 through the GitHub GraphQL API. It is generated daily by the
 `Update contribution Galaga` workflow, and can also be refreshed manually.

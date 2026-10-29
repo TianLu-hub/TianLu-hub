@@ -9,6 +9,9 @@ on:
     paths:
       - '.github/workflows/galaga.yml'
       - 'scripts/generate_galaga.mjs'
+      - 'scripts/calendar_data.mjs'
+      - 'tests/calendar_data.test.mjs'
+      - 'site/**'
 
 permissions:
   contents: read
@@ -37,6 +40,11 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           TZ: UTC
         run: node scripts/generate_galaga.mjs "$RUNNER_TEMP/arcade.mjs" dist
+      - name: Prepare interactive calendar
+        run: |
+          node --test tests/calendar_data.test.mjs
+          node --check site/calendar.js
+          cp site/* dist/
       - name: Validate SVG document
         run: |
           python3 - <<'PY'
@@ -53,8 +61,29 @@ jobs:
           path: |
             dist/galaga.svg
             dist/galaga-state.json
+            dist/calendar-data.json
           if-no-files-found: error
           retention-days: 3
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy-calendar:
+    needs: generate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Publish interactive contribution calendar
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   publish:
     needs: generate
@@ -83,7 +112,8 @@ jobs:
           fi
           cp "$RUNNER_TEMP/contribution-galaga/galaga.svg" galaga.svg
           cp "$RUNNER_TEMP/contribution-galaga/galaga-state.json" galaga-state.json
-          git add galaga.svg galaga-state.json
+          cp "$RUNNER_TEMP/contribution-galaga/calendar-data.json" calendar-data.json
+          git add galaga.svg galaga-state.json calendar-data.json
           if git diff --cached --quiet; then
             echo 'Animation already up to date.'
             exit 0

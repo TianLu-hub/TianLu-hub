@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { fetchCalendarData } from './calendar_data.mjs';
 
 const username = 'TianLu-hub';
 const upstreamCommit = '7332e1de7903ab780c3692a4127a59cc13872daa';
@@ -102,8 +103,10 @@ const metadata = {
   calendar_labels: { months: true, weekdays: ['Mon', 'Wed', 'Fri'], date_range: dateRange },
   svg_sha256: createHash('sha256').update(svg).digest('hex'),
 };
+const calendarData = await fetchCalendarData({ username, token, days });
 
 await mkdir(outputPath, { recursive: true });
 await writeFile(resolve(outputPath, 'galaga.svg'), svg);
 await writeFile(resolve(outputPath, 'galaga-state.json'), JSON.stringify(metadata, null, 2) + '\n');
+await writeFile(resolve(outputPath, 'calendar-data.json'), JSON.stringify(calendarData, null, 2) + '\n');
 console.log(`Rendered ${username}: ${total} contributions, ${activeDays} active days (${metadata.from}–${metadata.to}).`);

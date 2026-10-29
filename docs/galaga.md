@@ -27,3 +27,21 @@ movement and firing animation are unchanged.
 Month labels appear above the calendar, with Mon/Wed/Fri row markers on the left
 and the actual contribution date range below. Each column is one Sunday-starting
 week. These labels are regenerated with the calendar each day.
+
+## Interactive daily calendar
+
+The profile links to an interactive calendar hosted by this repository on GitHub
+Pages. Its month view labels every day; hovering, keyboard focus, or tapping a day
+shows its full date, public commits, and total contributions. A year view is also
+available. The page and its data refresh with the same daily workflow.
+
+Commit counts come from GitHub's `CreatedCommitContribution.commitCount`, summed
+across public repositories for each date. These are commits recognized by GitHub's
+contribution rules, not every raw Git commit. Total contributions come from
+`contributionCalendar` and may also include pull requests, issues, reviews, and
+other activity. Dates use GitHub's UTC contribution buckets. Private repository
+commit details are excluded. Incomplete API results stop publication rather than
+silently becoming zeroes.
+
+The README embeds an image, so individual cells cannot receive hover interactions
+there. Clicking the animation or its caption opens the interactive calendar.

@@ -24,3 +24,6 @@ The README plays the animation automatically. It is not a keyboard-controlled ga
 Empty and cleared calendar cells stay muted gray so the year-long grid remains
 visible. Green cells still reflect the real contribution levels, and the ship's
 movement and firing animation are unchanged.
+Month labels appear above the calendar, with Mon/Wed/Fri row markers on the left
+and the actual contribution date range below. Each column is one Sunday-starting
+week. These labels are regenerated with the calendar each day.

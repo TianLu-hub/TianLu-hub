@@ -64,6 +64,28 @@ if (calendarCells !== 53 * 7) {
   throw new Error('Unexpected Galaga calendar layout; refusing to publish incomplete styling.');
 }
 
+// Put readable calendar axes around the original animation without moving its sprites.
+const monthLabels = store.monthLabels.flatMap((label, column) => label ? [{ label, column }] : []);
+if (store.monthLabels.length !== 53 || monthLabels.some(({ label }) => !/^[A-Za-z]{3}$/.test(label))) {
+  throw new Error('Unexpected Galaga month labels.');
+}
+// A one- or two-week opening month has too little room for a separate label.
+const visibleMonths = monthLabels.filter((month, index) =>
+  index !== 0 || !monthLabels[1] || monthLabels[1].column - month.column >= 3);
+const monthAxis = visibleMonths.map(({ label, column }) =>
+  `<text x="${column > 50 ? 1214 : 50 + 22 * column}" y="24" text-anchor="${column > 50 ? 'end' : 'start'}">${label}</text>`).join('');
+const weekdayAxis = [[1, 'Mon'], [3, 'Wed'], [5, 'Fri']].map(([row, label]) =>
+  `<text x="40" y="${20 + 25 + 22 * row}" text-anchor="end" dominant-baseline="middle">${label}</text>`).join('');
+const dateFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const dateRange = `${dateFormat.format(new Date(days[0].date))} – ${dateFormat.format(new Date(days.at(-1).date))}`;
+const framedAnimation = svg.replace('<svg ', '<svg x="50" y="20" ');
+svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1228" height="316" viewBox="0 0 1228 316">
+<rect width="1228" height="316" fill="#000000"/>
+${framedAnimation}
+<g font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#b1bac4">${monthAxis}${weekdayAxis}
+<text x="50" y="304">${dateRange}</text></g>
+</svg>`;
+
 const total = days.reduce((sum, day) => sum + day.count, 0);
 const activeDays = days.filter(day => day.count > 0).length;
 const description = `Galaga generated from ${username}'s real GitHub contribution calendar: ${days[0].date} to ${days.at(-1).date}, ${total} contributions across ${activeDays} active days. Automatically played animation.`;
@@ -77,6 +99,7 @@ const metadata = {
   renderer: 'abozanona/pacman-contribution-graph', upstream_commit: upstreamCommit,
   renderer_sha256: expectedHash,
   empty_cell_color: emptyCellColor,
+  calendar_labels: { months: true, weekdays: ['Mon', 'Wed', 'Fri'], date_range: dateRange },
   svg_sha256: createHash('sha256').update(svg).digest('hex'),
 };
 

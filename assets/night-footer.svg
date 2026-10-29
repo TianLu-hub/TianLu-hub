@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="95" viewBox="0 0 900 95" role="img" aria-labelledby="title desc">
   <title id="title">TianLu-hub — a little room for the next idea</title>
-  <desc id="desc">A small desk lamp and coffee cup at night. Gentle steam rises beside a stack of books.</desc>
+  <desc id="desc">A small desk lamp and coffee cup at day. Gentle steam rises beside a stack of books.</desc>
   <defs>
-    <linearGradient id="room" x2="1" y2="1"><stop stop-color="#152337"/><stop offset="1" stop-color="#1D3047"/></linearGradient>
+    <linearGradient id="room" x2="1" y2="1"><stop stop-color="#E7EDEB"/><stop offset="1" stop-color="#D5E0E2"/></linearGradient>
     <linearGradient id="light" x1=".5" y1="0" x2=".5" y2="1"><stop stop-color="#E9B76F" stop-opacity=".2"/><stop offset="1" stop-color="#E9B76F" stop-opacity="0"/></linearGradient>
     <style>
-      .steam{fill:none;stroke:#F4ECDE;stroke-width:1.1;stroke-linecap:round;animation:steam-rise 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .steam{fill:none;stroke:#2F4255;stroke-width:1.1;stroke-linecap:round;animation:steam-rise 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
       .steam-b{animation-delay:-3s}
       .lamp-glow{animation:lamp-breathe 8s ease-in-out infinite}
       @keyframes steam-rise{0%,100%{transform:translate(0,1px) scaleX(.9);opacity:.14}50%{transform:translate(1px,-3px) scaleX(1.08);opacity:.45}}
@@ -14,14 +14,14 @@
     </style>
   </defs>
   <rect width="900" height="95" rx="12" fill="url(#room)"/>
-  <path d="M46 69H854" stroke="#9BAEC1" stroke-opacity=".24"/>
+  <path d="M46 69H854" stroke="#5C6E7D" stroke-opacity=".24"/>
   <circle cx="54" cy="45" r="2" fill="#E9B76F"/>
-  <text x="66" y="49" fill="#ADBCCB" font-family="Georgia,serif" font-style="italic" font-size="13">Leave a little room for the next idea.</text>
-  <path d="M722 32l-24 36h69l-28-36Z" fill="url(#light)" class="lamp-glow"/><g class="lamp-glow"><ellipse cx="735" cy="68" rx="29" ry="2" fill="#E9B76F" opacity=".07"/></g>
+  <text x="66" y="49" fill="#52677A" font-family="Georgia,serif" font-style="italic" font-size="13">Leave a little room for the next idea.</text>
+
   <path d="M703 64l-5-21 18-19" fill="none" stroke="#B29B7C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="698" cy="43" r="3" fill="#D6BC94"/>
   <path d="M719 18q11-2 15 5l7 10h-29l2-10q1-4 5-5Z" fill="#D9A967"/>
-  <path d="M712 33h29" stroke="#F4DCA7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M712 33h29" stroke="#B69670" stroke-width="2" stroke-linecap="round"/>
   <path d="M693 68q0-4 10-4t10 4Z" fill="#AFA18D"/>
   <path d="M789 53h4q6 0 6 5t-9 5" fill="none" stroke="#D2C6AF" stroke-width="2.5"/>
   <path d="M767 51h24l-2 13q-1 4-10 4t-10-4Z" fill="#E5DBC7"/>

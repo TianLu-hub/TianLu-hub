@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="818" viewBox="0 0 900 818" role="img" aria-labelledby="title description">
+  <title id="title">July 2026 · TianLu-hub public commits</title>
+  <desc id="description">July 2026 public commit calendar for TianLu-hub. Each cell shows its day at top left and public commit count at bottom right. Zero means no public commits. A dash means no data or a date after 2026-10-29. 31 of 31 dates available; 0 recorded public commits.</desc>
+  <rect width="900" height="818" rx="16" fill="#0b111b"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="28" y="54" font-size="36" fill="#f0f4fa" font-weight="700" text-anchor="start">July 2026</text>
+    <text x="872" y="52" font-size="23" fill="#83efb5" font-weight="700" text-anchor="end">0 commits</text>
+    <text x="28" y="87" font-size="19" fill="#9faec2" font-weight="400" text-anchor="start">Public commits · updated daily</text>
+    <text x="28" y="118" font-size="19" fill="#c4cedd" font-weight="400" text-anchor="start">Day at top left · commit count at bottom right</text>
+    <text x="84" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Sun</text>
+    <text x="206" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Mon</text>
+    <text x="328" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Tue</text>
+    <text x="450" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Wed</text>
+    <text x="572" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Thu</text>
+    <text x="694" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Fri</text>
+    <text x="816" y="156" font-size="20" fill="#9faec2" font-weight="700" text-anchor="middle">Sat</text>
+    <g data-date="2026-07-01" data-status="available" data-column="3" data-row="0">
+    <title>2026-07-01: 0 public commits</title>
+    <rect x="394" y="174" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="408" y="206" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">1</text>
+    <text x="492" y="259" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-02" data-status="available" data-column="4" data-row="0">
+    <title>2026-07-02: 0 public commits</title>
+    <rect x="516" y="174" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="530" y="206" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">2</text>
+    <text x="614" y="259" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-03" data-status="available" data-column="5" data-row="0">
+    <title>2026-07-03: 0 public commits</title>
+    <rect x="638" y="174" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="652" y="206" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">3</text>
+    <text x="736" y="259" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-04" data-status="available" data-column="6" data-row="0">
+    <title>2026-07-04: 0 public commits</title>
+    <rect x="760" y="174" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="774" y="206" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">4</text>
+    <text x="858" y="259" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-05" data-status="available" data-column="0" data-row="1">
+    <title>2026-07-05: 0 public commits</title>
+    <rect x="28" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="42" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">5</text>
+    <text x="126" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-06" data-status="available" data-column="1" data-row="1">
+    <title>2026-07-06: 0 public commits</title>
+    <rect x="150" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="164" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">6</text>
+    <text x="248" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-07" data-status="available" data-column="2" data-row="1">
+    <title>2026-07-07: 0 public commits</title>
+    <rect x="272" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="286" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">7</text>
+    <text x="370" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-08" data-status="available" data-column="3" data-row="1">
+    <title>2026-07-08: 0 public commits</title>
+    <rect x="394" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="408" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">8</text>
+    <text x="492" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-09" data-status="available" data-column="4" data-row="1">
+    <title>2026-07-09: 0 public commits</title>
+    <rect x="516" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="530" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">9</text>
+    <text x="614" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-10" data-status="available" data-column="5" data-row="1">
+    <title>2026-07-10: 0 public commits</title>
+    <rect x="638" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="652" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">10</text>
+    <text x="736" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-11" data-status="available" data-column="6" data-row="1">
+    <title>2026-07-11: 0 public commits</title>
+    <rect x="760" y="290" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="774" y="322" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">11</text>
+    <text x="858" y="375" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-12" data-status="available" data-column="0" data-row="2">
+    <title>2026-07-12: 0 public commits</title>
+    <rect x="28" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="42" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">12</text>
+    <text x="126" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-13" data-status="available" data-column="1" data-row="2">
+    <title>2026-07-13: 0 public commits</title>
+    <rect x="150" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="164" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">13</text>
+    <text x="248" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-14" data-status="available" data-column="2" data-row="2">
+    <title>2026-07-14: 0 public commits</title>
+    <rect x="272" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="286" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">14</text>
+    <text x="370" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-15" data-status="available" data-column="3" data-row="2">
+    <title>2026-07-15: 0 public commits</title>
+    <rect x="394" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="408" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">15</text>
+    <text x="492" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-16" data-status="available" data-column="4" data-row="2">
+    <title>2026-07-16: 0 public commits</title>
+    <rect x="516" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="530" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">16</text>
+    <text x="614" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-17" data-status="available" data-column="5" data-row="2">
+    <title>2026-07-17: 0 public commits</title>
+    <rect x="638" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="652" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">17</text>
+    <text x="736" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-18" data-status="available" data-column="6" data-row="2">
+    <title>2026-07-18: 0 public commits</title>
+    <rect x="760" y="406" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="774" y="438" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">18</text>
+    <text x="858" y="491" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-19" data-status="available" data-column="0" data-row="3">
+    <title>2026-07-19: 0 public commits</title>
+    <rect x="28" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="42" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">19</text>
+    <text x="126" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-20" data-status="available" data-column="1" data-row="3">
+    <title>2026-07-20: 0 public commits</title>
+    <rect x="150" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="164" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">20</text>
+    <text x="248" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-21" data-status="available" data-column="2" data-row="3">
+    <title>2026-07-21: 0 public commits</title>
+    <rect x="272" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="286" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">21</text>
+    <text x="370" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-22" data-status="available" data-column="3" data-row="3">
+    <title>2026-07-22: 0 public commits</title>
+    <rect x="394" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="408" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">22</text>
+    <text x="492" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-23" data-status="available" data-column="4" data-row="3">
+    <title>2026-07-23: 0 public commits</title>
+    <rect x="516" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="530" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">23</text>
+    <text x="614" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-24" data-status="available" data-column="5" data-row="3">
+    <title>2026-07-24: 0 public commits</title>
+    <rect x="638" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="652" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">24</text>
+    <text x="736" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-25" data-status="available" data-column="6" data-row="3">
+    <title>2026-07-25: 0 public commits</title>
+    <rect x="760" y="522" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="774" y="554" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">25</text>
+    <text x="858" y="607" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-26" data-status="available" data-column="0" data-row="4">
+    <title>2026-07-26: 0 public commits</title>
+    <rect x="28" y="638" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="42" y="670" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">26</text>
+    <text x="126" y="723" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-27" data-status="available" data-column="1" data-row="4">
+    <title>2026-07-27: 0 public commits</title>
+    <rect x="150" y="638" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="164" y="670" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">27</text>
+    <text x="248" y="723" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-28" data-status="available" data-column="2" data-row="4">
+    <title>2026-07-28: 0 public commits</title>
+    <rect x="272" y="638" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="286" y="670" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">28</text>
+    <text x="370" y="723" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-29" data-status="available" data-column="3" data-row="4">
+    <title>2026-07-29: 0 public commits</title>
+    <rect x="394" y="638" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="408" y="670" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">29</text>
+    <text x="492" y="723" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-30" data-status="available" data-column="4" data-row="4">
+    <title>2026-07-30: 0 public commits</title>
+    <rect x="516" y="638" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="530" y="670" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">30</text>
+    <text x="614" y="723" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <g data-date="2026-07-31" data-status="available" data-column="5" data-row="4">
+    <title>2026-07-31: 0 public commits</title>
+    <rect x="638" y="638" width="112" height="106" rx="9" fill="#161e2a" stroke="#283546"/>
+    <text x="652" y="670" font-size="25" fill="#f0f4fa" font-weight="400" text-anchor="start">31</text>
+    <text x="736" y="723" font-size="40" fill="#d5deec" font-weight="700" text-anchor="end">0</text>
+  </g>
+    <text x="28" y="777" font-size="18" fill="#9faec2" font-weight="400" text-anchor="start">0 = no public commits · — = no data / future date</text>
+    <text x="28" y="802" font-size="16" fill="#8c9cb2" font-weight="400" text-anchor="start">Data through 2026-10-29 · GitHub contribution rules apply</text>
+  </g>
+</svg>

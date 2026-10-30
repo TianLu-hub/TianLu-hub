@@ -1,14 +1,14 @@
 {
   "city": "New York",
   "timezone": "America/New_York",
-  "temperature_c": 14.8,
+  "temperature_c": 13.2,
   "weather": "clear",
   "weather_label": "Clear",
   "weather_code": 0,
   "phase": "night",
-  "observed_at": "2026-10-30T01:45:00+00:00",
-  "observed_label": "Oct 29, 21:45 EDT",
-  "sunrise": "2026-10-29T07:22:53-04:00",
-  "sunset": "2026-10-29T17:55:56-04:00",
+  "observed_at": "2026-10-30T08:30:00+00:00",
+  "observed_label": "Oct 30, 04:30 EDT",
+  "sunrise": "2026-10-30T07:24:02-04:00",
+  "sunset": "2026-10-30T17:54:42-04:00",
   "source": "https://open-meteo.com/"
 }

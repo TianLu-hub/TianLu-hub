@@ -117,7 +117,7 @@ def _context(scene):
     city = str(scene.get("city", "New York"))
     weather_label = str(scene.get("weather_label", weather.title()))
     observed = str(scene.get("observed_label", ""))
-    values["TITLE"] = escape("tianlu — %s in the study" % phase)
+    values["TITLE"] = escape("陆天 — %s in the study" % phase)
     values["DESCRIPTION"] = escape(
         "A quiet %s study overlooking %s. %s, %.0f degrees Celsius. "
         "A cat rests on the window sill beside books, a lamp, and warm coffee. "
@@ -233,7 +233,7 @@ _HEADER = r"""<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" v
   @CAT@
 
   <!-- The quiet space is deliberately reserved for the identity. -->
-  <text x="54" y="145" fill="@INK@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-weight="650" font-size="56" letter-spacing="-1.8">tianlu</text>
+  <text x="54" y="145" fill="@INK@" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-weight="650" font-size="56" letter-spacing="0">陆天</text>
 
   <!-- A single continuous desk joins the typography and the illustration. -->
   <rect x="45" y="251" width="810" height="8" rx="4" fill="url(#wood)"/>

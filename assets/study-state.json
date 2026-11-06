@@ -5,9 +5,9 @@
   "weather": "cloud",
   "weather_label": "Overcast",
   "weather_code": 3,
-  "phase": "dusk",
-  "observed_at": "2026-11-05T22:00:00+00:00",
-  "observed_label": "Nov 05, 17:00 EST",
+  "phase": "night",
+  "observed_at": "2026-11-06T02:30:00+00:00",
+  "observed_label": "Nov 05, 21:30 EST",
   "sunrise": "2026-11-05T06:31:05-05:00",
   "sunset": "2026-11-05T16:47:39-05:00",
   "source": "https://open-meteo.com/"

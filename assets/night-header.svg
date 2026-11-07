@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
   <title id="title">陆天 — day in the study</title>
-  <desc id="desc">A quiet day study overlooking New York. Overcast, 15 degrees Celsius. A cat rests on the window sill beside books, a lamp, and warm coffee. Weather observed Nov 07, 10:45 EST.</desc>
+  <desc id="desc">A quiet day study overlooking New York. Clear, 13 degrees Celsius. A cat rests on the window sill beside books, a lamp, and warm coffee. Weather observed Nov 07, 15:15 EST.</desc>
   <defs>
     <linearGradient id="room" x2="1" y2="1"><stop stop-color="#E7EDEB"/><stop offset="1" stop-color="#D5E0E2"/></linearGradient>
     <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#95BDD4"/><stop offset="1" stop-color="#D5E7EC"/></linearGradient>
@@ -42,14 +42,14 @@
   </defs>
   <rect width="900" height="300" rx="16" fill="url(#room)"/>
   <path d="M0 269H900" stroke="#5C6E7D" stroke-opacity=".07"/>
-
+  <path d="M598 112l-135 137h160l221-137Z" fill="#FFE8B0" opacity=".07"/>
 
   <!-- A framed night view, with the movement contained inside the glass. -->
   <rect x="587" y="20" width="268" height="194" rx="10" fill="#8D9DA6"/>
   <rect x="592" y="25" width="258" height="184" rx="7" fill="#B9C8CD"/>
   <rect x="598" y="31" width="246" height="170" rx="5" fill="url(#glass)"/>
   <g clip-path="url(#window-clip)">
-    <g opacity=".28"><circle cx="796" cy="65" r="23" fill="#FFE7AA" opacity=".12"/><circle cx="796" cy="65" r="13" fill="#FFE7AA"/></g>
+    <g opacity=".85"><circle cx="796" cy="65" r="23" fill="#FFE7AA" opacity=".12"/><circle cx="796" cy="65" r="13" fill="#FFE7AA"/></g>
     <path d="M590 155H611V125H635V144H650V109H676V130H695V151H711V118H733V137H749V103H768V129H787V146H807V119H826V140H856V207H590Z" fill="#93ACBC"/>
     <path d="M590 172H624V151H648V166H663V142H689V169H711V155H740V178H755V149H781V170H799V157H826V174H856V207H590Z" fill="#718B9F"/>
     <g fill="#B5CED9" class="city-lights" opacity=".55">
@@ -58,7 +58,7 @@
     <g fill="#C1D4DB" class="city-lights city-lights-b" opacity=".55">
       <rect x="617" y="135" width="3" height="4" rx=".5"/><rect x="728" y="144" width="3" height="4" rx=".5"/><rect x="762" y="124" width="3" height="4" rx=".5"/><rect x="674" y="154" width="3" height="4" rx=".5"/><rect x="719" y="165" width="3" height="4" rx=".5"/><rect x="807" y="170" width="3" height="4" rx=".5"/>
     </g>
-    <g class="clouds" fill="#F5F6F0" opacity=".64"><path d="M609 80q-5-10 8-13 4-17 22-11 13-8 21 5 17-2 18 12 13 0 13 10h-82Z"/><path d="M750 95q-4-9 8-11 4-13 18-10 10-7 19 5 14-2 17 10 11 0 12 9h-74Z"/></g>
+
     <path d="M605 35H697L605 127Z" fill="#B0CDDF" opacity=".025"/>
   </g>
   <path d="M720 31V201" stroke="#B9C8CD" stroke-width="5"/>

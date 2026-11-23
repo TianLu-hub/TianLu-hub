@@ -1,14 +1,14 @@
 {
   "city": "New York",
   "timezone": "America/New_York",
-  "temperature_c": 14.2,
-  "weather": "cloud",
-  "weather_label": "Overcast",
-  "weather_code": 3,
-  "phase": "night",
-  "observed_at": "2026-11-23T03:00:00+00:00",
-  "observed_label": "Nov 22, 22:00 EST",
-  "sunrise": "2026-11-22T06:50:53-05:00",
-  "sunset": "2026-11-22T16:33:04-05:00",
+  "temperature_c": 13.7,
+  "weather": "clear",
+  "weather_label": "Clear",
+  "weather_code": 0,
+  "phase": "day",
+  "observed_at": "2026-11-23T12:45:00+00:00",
+  "observed_label": "Nov 23, 07:45 EST",
+  "sunrise": "2026-11-23T06:52:01-05:00",
+  "sunset": "2026-11-23T16:32:30-05:00",
   "source": "https://open-meteo.com/"
 }
